@@ -61,5 +61,5 @@ var NilMiddleware = Middleware(nilProvider)
 // MiddlewareWithProvider is useful when you want to
 func MiddlewareWithProvider(rt *sdkrouter.Router, internalAPIHost string) mux.MiddlewareFunc {
 	p := NewIAPIProvider(rt, internalAPIHost)
-	return Middleware(p)
+	return LegacyMiddleware(p)
 }
